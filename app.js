@@ -6,7 +6,7 @@ const PORT = 2700;
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.redirect('public/staff/dashboard.html');
+  res.redirect('staff/dashboard.html');
 });
 
 app.listen(PORT, '0.0.0.0', () => {
