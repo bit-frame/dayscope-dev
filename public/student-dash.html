@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayScope - Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+                body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            z-index: 1000; /* Ensure sidebar stays below topbar */
+        }
+        .sidebar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .sidebar nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 5px 0;
+            display: block;
+            font-size: 1.1em;
+        }
+        .sidebar nav a:hover {
+            background-color: #34495e;
+        }
+
+        /* Topbar */
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0; /* Full width */
+            background-color: #ecf0f1;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #bdc3c7;
+            z-index: 1100; /* Ensure topbar stays on top */
+        }
+        .topbar .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+        .topbar input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #bdc3c7;
+        }
+        .topbar .actions {
+            display: flex;
+            gap: 15px;
+        }
+        .topbar .actions img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 250px; /* Space for sidebar */
+            margin-top: 60px; /* Space for fixed topbar */
+            flex-grow: 1;
+            background-color: #f4f6f7;
+            padding: 20px;
+        }
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">DayScope</div>
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Homework</a>
+            <a href="#">Exams</a>
+            <a href="#">Calendar</a>
+            <a href="#">Notices</a>
+            <a href="#">Messages</a>
+            <a href="#">Logout</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="logo">Student Dashboard</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="actions">
+                <img src="profile.jpg" alt="Profile">
+                <img src="bell-icon.png" alt="Notifications">
+            </div>
+        </header>
+
+        <!-- Dashboard Sections -->
+        <section class="section">
+            <h2>Homework</h2>
+            <p>List of homework due soon...</p>
+        </section>
+
+        <section class="section">
+            <h2>Upcoming Exams</h2>
+            <p>Exam schedule and details...</p>
+        </section>
+
+        <div class="grid">
+            <section class="section">
+                <h2>Calendar</h2>
+                <p>Monthly overview...</p>
+            </section>
+
+            <section class="section">
+                <h2>Student Notices</h2>
+                <p>Important announcements...</p>
+            </section>
+
+            <section class="section">
+                <h2>Messages from Classrooms</h2>
+                <p>Recent messages...</p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
