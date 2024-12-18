@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.redirect('staff/dashboard.html');
 });
 
+app.get('/student', (req, res) => {
+  res.redirect('student/student-dash.html');
+});
+
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running at http://localhost:${PORT}`);
 });
